@@ -1,0 +1,71 @@
+---
+title: "myCRAN: Graph of Daily and Cumulative Downloads of your Packages"
+author: Barry Zeeberg [aut, cre]
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{SherlockHolmes Part I}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:16.0pt;font-family:"Times New Roman",serif;
+color:red'>myCRAN: Wrapper for Convenient Graphical Rendering of Daily and Cumulative Downloads of your Packages<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:16.0pt;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:16.0pt;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:16.0pt;font-family:"Times New Roman",serif'>Barry
+Zeeberg<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:16.0pt;font-family:"Times New Roman",serif'>barryz2013@gmail.com<o:p></o:p></span></b></p><br>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'>This is a convenient program to plot the daily and cumulative number of downloads of your packages.
+    It is designed to be slightly more convenient than the several similar programs. If you want to run this each morning,
+    you do not need to keep typing in the names of your packages. Also, this combines the daily and cumulative counts in one
+    run, you do not need to run separate programs to get both types of information. The cumulative plots are very useful. From the shape of the slope, you can immediately see if interest in your package is still strong, or if things are petering out.</p><br>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'>The myCRAN program is invoked by
+
+<br>packages<-c("timeLineGraphics","textBoxPlacement","SherlockHolmes")<br>
+from<-"2023-01-01"<br>
+myCRAN(packages,from=from,plotNew=TRUE)<br>
+myCRAN(packages,when="last-week",plotNew=FALSE)<br><br>
+
+* *packages* character vector of names of packages.
+* *from* date parameter for cran_downloads().
+* *when* date parameter for cran_downloads().
+* *plotNew* Boolean if TRUE start a new plot window.
+* *plotWidth* integer width parameter for dev.new().<br>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:16.0pt;
+font-family:"Times New Roman",serif'>Here are the graphical results of running these 2 invocations of myCRAN. The first and third graphs display the daily counts; the second and fourth display the cumulative counts. The cumulative total for the time frame is given next to the package name in the figure legends. </p>
+    
+<br><br>
+![annualCount](annualCount.jpg){width=150%}
+
+<br><br>
+![annualCum](annualCum.jpg){width=150%}
+
+<br><br>
+![weeklyCount](weeklyCount.jpg){width=150%}
+<br><br>
+![weeklyCum](weeklyCum.jpg){width=150%}
+
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
