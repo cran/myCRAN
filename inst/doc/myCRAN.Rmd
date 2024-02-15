@@ -4,7 +4,7 @@ author: Barry Zeeberg [aut, cre]
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{SherlockHolmes Part I}
+  %\VignetteIndexEntry{myCRAN}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

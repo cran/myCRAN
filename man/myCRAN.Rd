@@ -4,10 +4,19 @@
 \alias{myCRAN}
 \title{myCRAN}
 \usage{
-myCRAN(packages, from, when, plotNew = TRUE, plotWidth = 15)
+myCRAN(
+  packages = NULL,
+  author = NULL,
+  from,
+  when,
+  plotNew = TRUE,
+  plotWidth = 12
+)
 }
 \arguments{
 \item{packages}{character vector of names of packages}
+
+\item{author}{character string of name of target author}
 
 \item{from}{date parameter for cran_downloads()}
 
@@ -25,10 +34,18 @@ of daily and cumulative number of downloads of your packages
 wrapper for cran_downloads() to plot counts and cumulative counts
 of downloads of CRAN packages
 }
+\details{
+Use either packages or author as the input parameter.
+When author is given, the function advanced_search() queries CRAN
+to return a list of the names of all packages by that author.
+}
 \examples{
-	packages<-c("timeLineGraphics","textBoxPlacement","SherlockHolmes")
+\dontrun{
+	packages<-c("timeLineGraphics","textBoxPlacement","SherlockHolmes","myCRAN")
+	author = "Zeeberg"
 	from<-"2023-01-01"
-	myCRAN(packages,from=from,plotNew=TRUE)
-	myCRAN(packages,when="last-week",plotNew=FALSE)
+	myCRAN(author=author,from=from,plotNew=TRUE)
+	myCRAN(packages=packages,when="last-week",plotNew=FALSE)
+	}
 
 }
