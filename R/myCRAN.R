@@ -87,12 +87,17 @@ myCRAN<-
 
 		ylim<-c(0,max)
 
+		total<-vector("numeric",nrow(l[[names(l)[1]]]))
 		for(pack in names(l)) {
 			lc[[pack]]$cum<-vector("integer",nrow(l[[pack]]))
 			lc[[pack]]$cum[1]<-l[[pack]][1,"count"]
-			for(i in 2:nrow(l[[pack]]))
+			for(i in 2:nrow(l[[pack]])) {
 				lc[[pack]]$cum[i]<-lc[[pack]]$cum[i-1]+l[[pack]][i,"count"]
+				total[i]<-total[i]+lc[[pack]]$cum[i]
+			}
 		}
+
+		par(mar = c(5, 4, 4, 4) + 0.3)
 		ylabel<-"cumulative counts"
 		#plot(x=l[[packages[1]]][,"date"],lc[["SherlockHolmes"]]$cum,ylim=ylim,type="l",
 		#	xlab=xlabel,ylab=ylabel,main=title)
@@ -103,5 +108,15 @@ myCRAN<-
 			lines(x=l[[packages[1]]][,"date"],y=lc[[pack]]$cum,col=colors[i])
 			i<-i+1
 		}
+
+		# new feature added March 21 2025
+		# add plot line for total of all packages
+		# thicker black line, mapped to y axis on the right of the graph!
+		par(new=TRUE)
+		ylim<-c(0,max(total))
+		plot(x=l[[packages[1]]][,"date"],y=total,col="black",type="l",lwd=5,axes=FALSE,ylim=ylim, bty = "n", xlab = "", ylab = "")
+		mtext("total",side=4)
+		axis(4, ylim=ylim,las=1)
+
 		legend("topleft",legend=leg,fill=colors)
 	}

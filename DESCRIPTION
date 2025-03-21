@@ -1,6 +1,6 @@
 Package: myCRAN
-Version: 1.1
-Date: 2024-02-14
+Version: 1.2
+Date: 2025-03-21
 Title: Graph of Daily and Cumulative Downloads of your Packages
 Authors@R: c(
           person("Barry", "Zeeberg", email = "barryz2013@gmail.com",
@@ -20,6 +20,6 @@ Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 RoxygenNote: 7.2.3
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-02-15 15:53:57 UTC; barryzeeberg
+Packaged: 2025-03-21 23:35:26 UTC; barryzeeberg
 Repository: CRAN
-Date/Publication: 2024-02-15 16:10:02 UTC
+Date/Publication: 2025-03-21 23:50:02 UTC

@@ -1,10 +1,10 @@
-1b41abe8f57986d794f918a98557bc03 *DESCRIPTION
+1847dd673753d4991e43c2cdac20811b *DESCRIPTION
 fa0aa38529939a6b858a695a879f7474 *NAMESPACE
-251fb03da4a6ec000da964812e01e6e9 *R/myCRAN.R
-e47e2ccb694925cdd38355d7c348c0bc *build/vignette.rds
+b65d215be56384f6971aae2520771547 *R/myCRAN.R
+cb3590a38e740f2271e22e531c88b92a *build/vignette.rds
 46750e778a5cdb4d65c347f8e43df623 *inst/doc/myCRAN.R
 4ff30d76235fa8cfc1278ea31f139a92 *inst/doc/myCRAN.Rmd
-d97aff50ed4879a0dba189b172451d3a *inst/doc/myCRAN.html
+1861cf74af2b8e75946e915f6e9a010b *inst/doc/myCRAN.html
 2ec5108e9ed388676ccdefc2a06b99de *man/myCRAN.Rd
 ea06581bf850c18f3f601989e0974798 *vignettes/annualCount.jpg
 22e4a67b186dfdf84cc04c0b3fb53186 *vignettes/annualCum.jpg
